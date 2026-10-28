@@ -1,0 +1,48 @@
+{
+  "model_name": "mcunet_512kb_2mb_imagenet",
+  "model_description": "mcunet_512kb_2mb_imagenet",
+
+  "input": {
+    "shape": [1, 160, 160, 3],
+    "dtype": "int8",
+    "size_bytes": 76800,
+    "zero_point": -128,
+    "scale": 0.00390625
+  },
+
+  "output": {
+    "shape": [1, 1000],
+    "dtype": "int8",
+    "size_bytes": 1000,
+    "zero_point": -128,
+    "scale": 0.00390625
+  },
+
+  "memory": {
+    "arena_size_bytes": 409600,
+    "weights_flash_bytes": 1850680,
+    "scratch_size_bytes": 7333,
+    "peak_sram_bytes": 416933
+  },
+
+  "performance": {
+    "total_macs": 0,
+    "estimated_cycles": 0,
+    "target_clock_mhz": 170,
+    "estimated_us": 0
+  },
+
+  "layers": [],
+
+  "files": {
+    "engine_source": "mcunet_512kb_2mb_imagenet_engine.c",
+    "engine_header": "mcunet_512kb_2mb_imagenet_engine.h",
+    "weights_header": "mcunet_512kb_2mb_imagenet_data.h"
+  },
+
+  "compiler": {
+    "version": "0.1.0",
+    "llvm_version": "24.0",
+    "target": "arm"
+  }
+}
